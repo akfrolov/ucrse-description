@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>РемСтройЭксплуатация - Сайт на реконструкции</title>
+        <meta
+            name="description"
+            content="Приоритетное направление компании - управление объектами промышленной недвижимости"
+        />
+        <!-- removed slash from favicon href -->
+        <link rel="icon" type="image/x-icon" href="public/favicon.ico" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            :root {
+                /* updated colors for dark theme */
+                --menu-color: #404040;
+                --menu-dark: #303030;
+                --text-primary: #ffffff;
+                --text-secondary: #b0b0b0;
+                --bg-dark: #1a1a1a;
+                --bg-card: #2a2a2a;
+                --border-dark: #404040;
+                /* changed accent color from blue to red */
+                --accent-color: #ef4444;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Inter", sans-serif;
+                line-height: 1.6;
+                color: var(--text-primary);
+                /* dark gradient background */
+                background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 2rem;
+                text-align: center;
+            }
+
+            .construction-card {
+                /* dark card background with subtle border */
+                background: var(--bg-card);
+                border-radius: 20px;
+                padding: 3rem 2rem;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+                backdrop-filter: blur(10px);
+                border: 1px solid var(--border-dark);
+            }
+
+            .logo {
+                /* increased logo size */
+                width: 200px;
+                height: auto;
+                margin: 0 auto 2rem;
+                display: block;
+            }
+
+            /* removed company name section since it's in the logo */
+
+            .tagline {
+                font-family: "Montserrat", sans-serif;
+                font-size: 1.1rem;
+                color: var(--text-secondary);
+                margin-bottom: 2.5rem;
+                font-weight: 400;
+            }
+
+            .construction-title {
+                font-family: "Montserrat", sans-serif;
+                font-size: 2rem;
+                font-weight: 600;
+                /* using accent color for title */
+                color: var(--accent-color);
+                margin-bottom: 1rem;
+            }
+
+            .construction-message {
+                font-size: 1.1rem;
+                color: var(--text-secondary);
+                margin-bottom: 2.5rem;
+                line-height: 1.7;
+            }
+
+            .contact-info {
+                /* darker background for contact section */
+                background: var(--bg-dark);
+                border-radius: 15px;
+                padding: 2rem;
+                margin-top: 2rem;
+            }
+
+            .contact-title {
+                font-family: "Montserrat", sans-serif;
+                font-size: 1.3rem;
+                font-weight: 600;
+                color: var(--text-primary);
+                margin-bottom: 1.5rem;
+            }
+
+            .contact-item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+                margin-bottom: 1rem;
+                font-size: 1rem;
+            }
+
+            .contact-item:last-child {
+                margin-bottom: 0;
+            }
+
+            .contact-link {
+                /* accent color for links */
+                color: var(--accent-color);
+                text-decoration: none;
+                font-weight: 500;
+                transition: color 0.3s ease;
+            }
+
+            .contact-link:hover {
+                /* updated hover color to lighter red */
+                color: #f87171;
+            }
+
+            .icon {
+                width: 20px;
+                height: 20px;
+                /* accent color for icons */
+                fill: var(--accent-color);
+            }
+
+            .progress-bar {
+                width: 100%;
+                height: 4px;
+                /* darker progress bar background */
+                background: var(--border-dark);
+                border-radius: 2px;
+                margin: 2rem 0;
+                overflow: hidden;
+            }
+
+            .progress-fill {
+                height: 100%;
+                /* changed progress gradient from blue to red */
+                background: linear-gradient(
+                    90deg,
+                    var(--accent-color),
+                    #f87171
+                );
+                width: 65%;
+                border-radius: 2px;
+                animation: pulse 2s ease-in-out infinite alternate;
+            }
+
+            @keyframes pulse {
+                0% {
+                    opacity: 0.8;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .container {
+                    padding: 1rem;
+                }
+
+                .construction-card {
+                    padding: 2rem 1.5rem;
+                }
+
+                /* adjusted logo size for mobile */
+                .logo {
+                    width: 150px;
+                }
+
+                .construction-title {
+                    font-size: 1.5rem;
+                }
+
+                .contact-item {
+                    flex-direction: column;
+                    gap: 0.25rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="construction-card">
+                <!-- removed slash from logo src -->
+                <img
+                    src="public/logo.svg"
+                    alt="РемСтройЭксплуатация"
+                    class="logo"
+                />
+
+                <!-- removed company name heading since it's in the logo -->
+                <p class="tagline">
+                    Приоритетное направление компании - управление объектами
+                    промышленной недвижимости
+                </p>
+
+                <h2 class="construction-title">Сайт на реконструкции</h2>
+                <p class="construction-message">
+                    Мы работаем над улучшением нашего веб-сайта, чтобы
+                    предоставить вам лучший опыт. Скоро здесь появится
+                    обновленная версия с расширенным функционалом.
+                </p>
+
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+
+                <div class="contact-info">
+                    <h3 class="contact-title">Свяжитесь с нами</h3>
+
+                    <div class="contact-item">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                            />
+                        </svg>
+                        <a href="mailto:info@ucrse.ru" class="contact-link"
+                            >info@ucrse.ru</a
+                        >
+                    </div>
+
+                    <div class="contact-item">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path
+                                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                            />
+                        </svg>
+                        <a href="tel:+78129381312" class="contact-link"
+                            >+7 (812) 938-13-12</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
